@@ -1,8 +1,4 @@
-# W-Box
-
-
-<center><img src="images/demo-gnome.png"></center>
-<p align="center"><b>W-Box для Termux</b></p>
+### Mobox Menu v.5.3
 
 <div align="center">
 
@@ -10,7 +6,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/sabamdarif/gnome-in-termux)
 
 </div>
-
+<div align="left">
 ### ОСОБЕННОСТИ:
 
 - :computer: Наличие виджета.
