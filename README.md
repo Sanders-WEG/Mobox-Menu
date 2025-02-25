@@ -14,6 +14,7 @@ ____
 </div>
 <div align="left">
 https://t.me/weg_mod_mobox/12/136
+   
 ### Установка:
 - Подробная Видеоинструкч=ции по установке и пользованию [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/11)
 - ##Необходимый софт:
