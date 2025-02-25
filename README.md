@@ -1,9 +1,7 @@
 ### Mobox Menu v.5.3
 
 <div align="center">
-
-![GitHub stars](https://img.shields.io/github/stars/sabamdarif/gnome-in-termux)
-![GitHub issues](https://img.shields.io/github/issues/sabamdarif/gnome-in-termux)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
 
 </div>
 <div align="left">
