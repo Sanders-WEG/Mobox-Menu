@@ -1,6 +1,7 @@
 ### Mobox Menu v.5.3
 
 <div align="center">
+   
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
 
 </div>
