@@ -1,19 +1,17 @@
-### Mobox Menu v.5.3
+
 
 <div align="center">
    
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
 
-</div>
-<div align="left">
 ### ОСОБЕННОСТИ:
-
 - :computer: Наличие виджета.
 - :computer: Запуск игр из виджета или с иконки в Android.
 - :computer: [Termux:x11](https://github.com/termux/termux-x11) For Display Server.
 - :computer: Каждую игру и Mobox можно настроить индивидуально. Т.е. у каждого приложения свои настройки всех компонентов.
 
-> ***ТЕСТОВЫЙ ВЫПУСК***
+</div>
+<div align="left">
 
 
 ### Установка:
