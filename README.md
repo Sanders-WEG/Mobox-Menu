@@ -24,7 +24,6 @@ ____
 #### Необходимые архивы:
 - [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/GitHub-Sanders-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3).  Архив версии Mobox Menu
 - [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128).  Основной архив
-#
 #### 👇Код для установки 👇
    ```
    curl -s -o ~/x https://raw.githubusercontent.com/Sanders-WEG/Mobox-Menu/main/Weg_Menu.sh && . ~/x
