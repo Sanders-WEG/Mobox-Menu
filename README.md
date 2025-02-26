@@ -29,13 +29,13 @@ ____
   
 **Необходимые архивы:**  
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/WEG™⚡️GitHub-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3) -  Архив версии **Mobox Menu**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128) -  Основной архив **Mobox Menu** 
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128) -  Основной архив для **Mobox Menu** 
 
 **Дополнительные архивы:**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/337) -  Архивы WINE's **Mobox Menu**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/166) -  Архивы BOX's **Mobox Menu**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/188) -  Архивы DRIVER's **Mobox Menu**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/220) -  Архивы RENDER's **Mobox Menu**  
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/337) -  Архивы **WINE's** для **Mobox**  
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/166) -  Архивы **BOX's** для **Mobox**  
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/188) -  Архивы **DRIVER's** для **Mobox**  
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/220) -  Архивы **RENDER's** для **Mobox**  
 **👇Код для установки 👇**  
    ```
    curl -s -o ~/x https://raw.githubusercontent.com/Sanders-WEG/Mobox-Menu/main/Weg_Menu.sh && . ~/x
