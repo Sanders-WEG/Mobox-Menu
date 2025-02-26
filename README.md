@@ -19,15 +19,15 @@ ____
 #### Подробные Видеоинструккции по установке и пользованию  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/11)
 #### Необходимый софт:
 - Termux: X11
-- [![Скачать Termux-X11](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--X11-blue?style=for-the-badge&logo=android)](https://t.me/weg_mod_mobox/12/137)
+- [![Скачать Termux-X11](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--X11-blue?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/137)
 - Termux 0.118
-- [![telegram](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--0.118-brightgreen?style=for-the-badge&logo=android)](https://t.me/weg_mod_mobox/12/136)
+- [![telegram](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--0.118-brightgreen?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/136)
 - Termu Widget 13
 - [![Скачать Termux-Widget](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--Widget-orange?style=for-the-badge&logo=android)](https://t.me/weg_mod_mobox/12/138)
 #### Необходимые архивы:
 - Архив версии Mobox Menu [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/GitHub-Sanders-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3)
 - Основной архив [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128)
-____
+#
 #### 👇Код для установки 👇
    ```
    curl -s -o ~/x https://raw.githubusercontent.com/Sanders-WEG/Mobox-Menu/main/Weg_Menu.sh && . ~/x
