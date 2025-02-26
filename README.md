@@ -3,8 +3,8 @@
 <div align="center">
    
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
-
-[![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox)
+#
+### Группа в Телеграм WEG™⚡️Mobox Menu [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox)
 ____
 ### Особенности Mobox Menu:
 - :computer: Наличие виджета.
