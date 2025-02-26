@@ -17,7 +17,7 @@ ____
 ## Установка Mobox Menu:
 #### Подробные Видеоинструккции по установке и пользованию  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/11)
 #### Необходимый софт:
-- Termux o.118  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/136)
+- Termux 0.118  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/136)
 - Termux: X11  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/137)
 - Termu Widget 13  [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/138)
 #### Необходимые архивы:
@@ -123,6 +123,6 @@ ____
 ____
 Ссылки на оригинальные файлы:
 - [Mobox](https://github.com/olegos2/mobox)
-- [Termux](https://github.com/termux/termux-app)
-- [Termux:X11](https://github.com/termux/termux-x11)
-- [Termux Widget](https://github.com/termux/termux-widget)
+- [Termux 0.118](https://github.com/termux/termux-app)
+- [Termux: X11](https://github.com/termux/termux-x11)
+- [Termux Widget 13](https://github.com/termux/termux-widget)
