@@ -122,7 +122,7 @@ ____
 ### ✅ Выбор и настройка фона рабочего стола контейнера.
 ____
 Ссылки на оригинальные файлы:
-[Mobox](https://github.com/olegos2/mobox)
-[Termux](https://github.com/termux/termux-app)
-[Termux:X11](https://github.com/termux/termux-x11)
-[Termux Widget](https://github.com/termux/termux-widget)
+- [Mobox](https://github.com/olegos2/mobox)
+- [Termux](https://github.com/termux/termux-app)
+- [Termux:X11](https://github.com/termux/termux-x11)
+- [Termux Widget](https://github.com/termux/termux-widget)
