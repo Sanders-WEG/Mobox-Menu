@@ -48,8 +48,10 @@ ____
 ## Подробнее о Mobox Menu v.5.3:
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/photo_2025-02-25_07-59-10.jpg)
 - ✅ Установка двух версий одновременно без наличия интернета (40 сек распаковка + по 3 мин создание контейнеров двух версий Mobox).
+- 
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
 - ✅ Создание иконок приложений на рабочем столе Android.
+- 
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_2.png)
 - ✅ Запуск игр из виджета или с иконки в Android.
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_3.png)
