@@ -49,50 +49,50 @@ ____
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/photo_2025-02-25_07-59-10.jpg)
 - ✅ Установка двух версий одновременно без наличия интернета (40 сек распаковка + по 3 мин создание контейнеров двух версий Mobox).
 - 
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/1.png)
 - ✅ Создание иконок приложений на рабочем столе Android.
 - 
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_2.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/2.png)
 - ✅ Запуск игр из виджета или с иконки в Android.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_3.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/3.png)
 - ✅ Удобное переключение между box86 и WOW64.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_4.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/_4.png)
 - ✅ Легкая и быстрая установка драйверов (turnip, dxvk, box, wine)
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_12.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/12.png)
 - ✅ Совмещение с Mobox напрямую, что гарантирует стабильность настроек в моде.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_5.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/5.png)
 - ✅ Возможность установки из любой папки, с любым именем.
 - ✅ Выбор языка классического меню выбирается один раз для двух версий сразу.
 - ✅ Изменение масштаба экрана в процессе игры (растянуть, не растягивать)
 - ✅ Удаление ярлыков из папки рабочего стола если приложение уже удалено.
 - ✅ Настройки в моде и в классическом меню взаимодействуют. Т.е., меняете параметр в одном, меняется и в другом
 - ✅ Поддержка Android 15
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_14.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/14.png)
 - ✅ Запуск WINE и его выключение сопровождается диалоговым окном.
 - ✅ Включение и отключение автозапуска InputBridge.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_21.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/21.png)
 - ✅ Настройка параметров HUD. Масштаб, компоненты для каждой игры отдельно.
 - ✅ Сброс настроек до начальных, в случае неудачных настроек пользователем.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_20.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/20.png)
 - ✅ Импорт и экспорт настроек игры. Т.е. возможен обмен настройками каждой игры отдельно между пользователями.
 - ✅ Запуск WINE двумя способами: через классическое меню (стандарт) или через мод меню.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_15.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/15.png)
 - ✅ Добавлен mc- менеджер (дает возможность менять, копировать, удалять, редактировать файлы в Mobox (диски C, Z) не заходя в WINE.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_11.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/11.png)
 - ✅ Заставка при запуске WINE или игры. Можно менять.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_16.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/16.png)
 - ✅ Легкий и быстрый способ обновления всех компонентов Mobox Mod.
 - ✅ Возможность изменить название ярлыка
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_16.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/16.png)
 - ✅ Добавлена третья кнопка в некоторых окнах
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_9.png)
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_8.png)
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_7.png)
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_6.png)
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_10.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/9.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/8.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/7.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/6.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/10.png)
 - ✅ Добавлены три темы оформления абчего стола. Теперь их пять.
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_13.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/13.png)
 - ✅ Кастомная настройка ядер процессора при запуске игры или контейнера
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_22.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/22.png)
 - ✅ Выбор и настройка фона рабочего стола контейнера
 
