@@ -1,7 +1,9 @@
 
 
 <div align="center">
-   
+
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/Menu.png)
+
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
 #
 ### Группа "WEG™⚡️Mobox Menu" 
