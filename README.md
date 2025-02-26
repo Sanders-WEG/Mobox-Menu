@@ -36,11 +36,12 @@ ____
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/166) -  Архивы **BOX's** для **Mobox**  
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/188) -  Архивы **DRIVER's** для **Mobox**  
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/220) -  Архивы **RENDER's** для **Mobox**  
+  
 **👇Код для установки 👇**  
    ```
    curl -s -o ~/x https://raw.githubusercontent.com/Sanders-WEG/Mobox-Menu/main/Weg_Menu.sh && . ~/x
    ```
-**❗️Для установки необходимо скачать оба предложенные архива и объединить их в одной директории❗️**  
+**❗️Для установки необходимо скачать оба предложенных архива и объединить их в одной директории❗️**  
 ____
 ## Описание Mobox Menu:  
 🧿 Предназначен для запуска и установки Mobox box86 и Mobox WoW64 без наличия интернета.  
