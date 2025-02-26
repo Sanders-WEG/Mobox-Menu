@@ -22,8 +22,8 @@ ____
 - [![telegram](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--0.118-brightgreen?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/136)
 - [![Скачать Termux-Widget](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--Widget-orange?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/138)
 #### Необходимые архивы:
-- Архив версии Mobox Menu [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/GitHub-Sanders-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3)
-- Основной архив [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128)
+ [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/GitHub-Sanders-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3).  Архив версии Mobox Menu
+- [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128).  Основной архив
 #
 #### 👇Код для установки 👇
    ```
