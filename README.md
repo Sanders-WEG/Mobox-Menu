@@ -8,10 +8,11 @@
 #
 ### Группа "WEG™⚡️Mobox Menu" 
 [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox)
-____
- **Особенности Mobox Menu:**  
-**:computer: Наличие виджета.**  
-**:computer: Запуск игр из виджета или с иконки в Android.**  
+____ 
+##  Особенности Mobox Menu:  
+  
+**:computer: Наличие виджета для запуска Windiws-приложений с рабочего стола Android.**  
+**:computer: Возможна установка как одной из версий Mobox, так и двух одновременно (box86 и WoW64).**  
 **:computer: Каждую игру и Mobox можно настроить индивидуально. Каждое приложение со воими настройки всех компонентов.**  
 ____
 </div>
@@ -20,10 +21,12 @@ ____
 ## Установка Mobox Menu:  
 **Подборка Видеоинструккций:**  
 [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/11) - Установка и пользование.  
+  
 **Необходимый софт:**  
 [![Скачать Termux-X11](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--X11-blue?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/137)  
 [![telegram](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--0.118-brightgreen?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/136)  
 [![Скачать Termux-Widget](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--Widget-orange?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/138)  
+  
 **Необходимые архивы:**  
 [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/GitHub-Sanders-black?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3) -  Архив версии Mobox Menu  
 [![telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128) -  Основной архив  
