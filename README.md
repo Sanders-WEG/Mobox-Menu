@@ -4,7 +4,7 @@
 
 ![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/Menu.png)
 
-![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/menu_1.png)
+![Иллюстрация к проекту](https://github.com/Sanders-WEG/Dop-img/blob/main/Menu_1.png)
 #
 ### Группа "WEG™⚡️Mobox Menu" 
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox)
