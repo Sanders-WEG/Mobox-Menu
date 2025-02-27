@@ -51,73 +51,84 @@ cp -r "$BASE_DIR/backup/"* /data/data/com.termux/files/
 temp_dir="$BASE_DIR/Mobox86_64/temp_mobox_install"
 [ -d "$temp_dir" ] && rm -rf "$temp_dir"
 mkdir -p "$temp_dir"
-if [ "$versioo_mob" = "86_WOW" ]; then
-show_progress "Распаковка" "⏳ Извлечение wow64.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$temp_dir"
-show_progress "Распаковка" "⏳ Извлечение x86.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir"
 x86_dir="$temp_dir/x86"
-if [ -d "$x86_dir" ]; then
-show_progress "Установка" "⏳ Создание библиотек Mobox box86..." 2
-    for archive in "$x86_dir/"*; do
-        if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
-            tar -xf "$archive" -C "$PREFIX/"
-        fi
-    done
-else
-    dialog --no-shadow \
+wow64_dir="$temp_dir/wow64"
+if [ "$versioo_mob" = "86_WOW" ]; then
+    show_progress "Распаковка" "⏳ Извлечение x86.tar.gz..." 2
+    tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir"
+    show_progress "Распаковка" "⏳ Извлечение wow64.tar.gz..." 2
+    tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$temp_dir"
+    if [ -d "$x86_dir" ]; then
+        show_progress "Установка" "⏳ Создание библиотек Mobox box86..." 2
+        for archive in "$x86_dir/"*; do
+            if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
+                tar -xf "$archive" -C "$PREFIX/"
+            fi
+        done
+    else
+        dialog --no-shadow \
     --msgbox "🚫 \n
    Файл x86.tar.gz не существует." 6 41
-fi
-if [ -d "$PREFIX/glibc" ]; then
+    fi
+    if [ -d "$PREFIX/glibc" ]; then
     mv "$PREFIX/glibc" "$PREFIX/glibc-x86"
-else
-    dialog --no-shadow \
+    else
+        dialog --no-shadow \
     --msgbox "🚫 \n
 Файл архива glibc-x86/х64 отсутствует." 6 42
-fi
-wow64_dir="$temp_dir/wow64"
-if [ -d "$wow64_dir" ]; then
-    show_progress "Устпновка" "⏳ Создание библиотек Mobox WoW64..." 2
-    for archive in "$wow64_dir/"*; do
-        if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
-            tar -xf "$archive" -C "$PREFIX/"
-        fi
-    done
-else
+    fi
+    if [ -d "$wow64_dir" ]; then
+        show_progress "Устпновка" "⏳ Создание библиотек Mobox WoW64..." 2
+        for archive in "$wow64_dir/"*; do
+            if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
+                tar -xf "$archive" -C "$PREFIX/"
+            fi
+        done
+    else
+    dialog --no-shadow \
+    --msgbox "🚫 \n
+ Файл wow64.tar.gz не найден." 6 39
+    fi
+    cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc/
+    cp -r "$BASE_DIR/system/glibc_86_ru/"* /data/data/com.termux/files/usr/glibc-x86/
+elif [ "$versioo_mob" = "86" ]; then
+    show_progress "Распаковка" "⏳ Извлечение x86.tar.gz..." 2
+    tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir"
+    if [ -d "$x86_dir" ]; then
+        show_progress "Установка" "⏳ Создание библиотек Mobox box86..." 2
+        for archive in "$x86_dir/"*; do
+            if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
+                tar -xf "$archive" -C "$PREFIX/"
+            fi
+        done
+    else
+    dialog --no-shadow \
+    --msgbox "🚫 \n
+  Файл x86.tar.gz не найден." 6 40
+    fi
+    cp -r "$BASE_DIR/system/glibc_86_ru/"* /data/data/com.termux/files/usr/glibc/
+elif [ "$versioo_mob" = "WOW" ]; then
+    show_progress "Распаковка" "⏳ Извлечение wow64.tar.gz..." 2
+    tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$temp_dir"
+    if [ -d "$wow64_dir" ]; then
+        show_progress "Устпновка" "⏳ Создание библиотек Mobox WoW64..." 2
+        for archive in "$wow64_dir/"*; do
+            if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
+                tar -xf "$archive" -C "$PREFIX/"
+            fi
+        done
+    else
     dialog --no-shadow \
     --msgbox "🚫 \n
  Файл wow64.tar.gz не найден." 6 39
 fi
-cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc/
-cp -r "$BASE_DIR/system/glibc_86_ru/"* /data/data/com.termux/files/usr/glibc-x86/
-elif [ "$versioo_mob" = "86" ]; then
-show_progress "Распаковка" "⏳ Извлечение x86.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir"
-x86_dir="$temp_dir/x86"
-if [ -d "$x86_dir" ]; then
-show_progress "Установка" "⏳ Создание библиотек Mobox box86..." 2
-    for archive in "$x86_dir/"*; do
-        if [[ $archive == *.tar.gz || $archive == *.tar.xz ]]; then
-            tar -xf "$archive" -C "$PREFIX/"
-        fi
-    done
-else
-    dialog --no-shadow \
-    --msgbox "🚫 \n
-   Файл x86.tar.gz не существует." 6 41
-fi
-cp -r "$BASE_DIR/system/glibc_86_ru/"* /data/data/com.termux/files/usr/glibc/
-
-elif [ "$versioo_mob" = "WOW" ]; then
-show_progress "Распаковка" "⏳ Извлечение wow64.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$PREFIX/"
 cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc/
 fi
 show_progress "Установка" "⏳ Удаление временных файлов..." 2
 rm -rf "$temp_dir"
 link_target="$PREFIX/glibc/opt/scripts/mobox"
 chmod +x /data/data/com.termux/files/usr/bin/magick
+sleep 1
 if [ -f "$link_target" ]; then
     ln -sf "$link_target" "$PREFIX/bin/mobox"
     show_progress "Установка" "⏳ Символическая ссылка создана" 2
@@ -765,11 +776,7 @@ choice=$(dialog --no-shadow \
                     ;;
 " Обновить WEG™⚡️Mobox Menu & Widget") 
      show_progress "Обновление" "⏳ Копирование файлов..." 2
-        if [ $LOCALE_WIDGET == "Русский" ]; then
             cp -r "$BASE_DIR/backup/"* /data/data/com.termux/files/
-        else 
-            cp -r "$BASE_DIR/backup_eng/"* /data/data/com.termux/files/
-        fi
      exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
 ;;
 " Язык классического меню Mobox") 
@@ -793,6 +800,7 @@ case $choice in
         cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc-wow64/
         cp -r "$BASE_DIR/system/glibc_86_ru/"* /data/data/com.termux/files/usr/glibc/
         fi
+echo "Русский" > "$PREFIX/bin/widget/local"
 exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
         ;;
 " $chek_lokal_a English Language")
@@ -803,6 +811,7 @@ exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
         cp -r "$BASE_DIR/system/glibc_64_en/"* /data/data/com.termux/files/usr/glibc-wow64/
         cp -r "$BASE_DIR/system/glibc_86_en/"* /data/data/com.termux/files/usr/glibc/
         fi
+echo "English" > "$PREFIX/bin/widget/local"
 exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
         ;;
 esac
@@ -951,7 +960,7 @@ else
         [ -d "$temp_dir" ] && rm -rf "$temp_dir"
         mkdir -p "$temp_dir"
         show_progress "Распаковка" "⏳ Извлечение wow64.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$temp_dir" wow64
+tar -xzf "$BASE_DIR/Mobox86_64/wow64.tar.gz" -C "$temp_dir"
         if [ -d "$PREFIX/glibc" ]; then
             mv "$PREFIX/glibc"
             mv "$PREFIX/glibc-x86"
@@ -1034,7 +1043,7 @@ else
         [ -d "$temp_dir" ] && rm -rf "$temp_dir"
         mkdir -p "$temp_dir"
         show_progress "Распаковка" "⏳ Извлечение x86.tar.gz..." 2
-tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir" x86
+tar -xzf "$BASE_DIR/Mobox86_64/x86.tar.gz" -C "$temp_dir"
         if [ -d "$PREFIX/glibc" ]; then
             mv "$PREFIX/glibc" 
             mv "$PREFIX/glibc-wow64"
@@ -1189,7 +1198,7 @@ options_64=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_64" 17 41 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_64" 25 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
 elif [ "$versioo_mob" = "86" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1207,7 +1216,7 @@ options_86=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_86" 17 41 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_86" 25 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
 fi
         case $? in
             1) break ;;
