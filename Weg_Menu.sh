@@ -1,9 +1,8 @@
 #!/bin/bash
-mkdir -p "$PREFIX/bin/widget/"  
+
 CONFIG="/$HOME/.shortcuts/,/Mobox box86"
 LOCALDIR="/$PREFIX/bin/widget/local"
 LOCALE_WIDGET="Русский"
-echo "$LOCALE_WIDGET" > "$PREFIX/bin/widget/local"
 show_progress() {
      title="$1"
      message="$2"
@@ -25,6 +24,9 @@ termux-setup-storage &>/dev/null
 wait
     clear
 fi
+mkdir -p "$PREFIX/bin/widget/"
+echo "" > "$PREFIX/bin/widget/directory"
+echo "$LOCALE_WIDGET" > "$PREFIX/bin/widget/local"
 BASE_DIR=$(<"$PREFIX/bin/widget/directory")
 if [ "$BASE_DIR" = "" ]; then
     BASE_DIR="/storage/emulated/0/Download/weg"
@@ -404,7 +406,7 @@ PLATFORM=$(getprop ro.board.platform)
 VENDOR=$(getprop ro.hardware.vendor)
 case "$SOC_MODEL" in
     "SM8150") CHIPSET="Snapdragon 855+; 860" ;;
-    "SM8250") CHIPSET="Snapdragon 865; 865+" ;;
+    "SM8250") CHIPSET="Snapdragon 865+; 870" ;;
     "SM8350") CHIPSET="Snapdragon 888" ;;
     "SM8450") CHIPSET="Snapdragon 8 Gen 1" ;;
     "SM8550") CHIPSET="Snapdragon 8 Gen 2" ;;
