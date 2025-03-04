@@ -259,7 +259,7 @@ sed -i "5s|.*|DIR=$WEG_TXT|" "$DIR_DEFLF"
 fi
     if [ -d "$PREFIX/glibc-wow64" ] || [ -d "$PREFIX/glibc-x86" ] || [ -d "$PREFIX/glibc" ]; then
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.3" --menu "Выберите действие:" 13 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.4" --menu "Выберите действие:" 13 38 3 \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
 " Установить Mobox WoW64" "" \
@@ -269,7 +269,7 @@ fi
             3>&1 1>&2 2>&3)
     else
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.3" --menu "Выберите действие:" 12 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.4" --menu "Выберите действие:" 12 38 3 \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
 " Установить Mobox WoW64" "" \
@@ -926,6 +926,7 @@ if [ $WINE_START_86 = 0 ]; then
     fi
         clear
 fi
+sed -i "204s/.*/WINE_WERS_86=\"${WINE_ST}\"/" "$wine_86"
             . "$HOME/.shortcuts/,/Mobox box86"
             ;;
             2) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
@@ -1012,6 +1013,7 @@ sed -i "59s/.*/WINE_64=OFF/" "$wine_64"
 fi
 clear
 fi
+sed -i "188s/.*/WINE_WERS_64=\"${WINE_ST}\"/" "$wine_64"
             . "$HOME/.shortcuts/,/Mobox WoW64"
             ;;
             2.) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
@@ -1158,7 +1160,7 @@ fi
         fi
       menu_height=$((19 + ${#options64[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
     else
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1181,7 +1183,7 @@ options86=(
     fi
     menu_height=$((19 + ${#options86[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
 fi
 elif [ "$versioo_mob" = "WOW" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
@@ -1200,7 +1202,7 @@ options_64=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_64" 25 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_64" 25 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
 elif [ "$versioo_mob" = "86" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1218,7 +1220,7 @@ options_86=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.3" --menu "$dialog_text_86" 25 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_86" 25 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
 fi
         case $? in
             1) break ;;
