@@ -1,5 +1,5 @@
 #!/bin/bash
-
+BASE_DIR=$(<"$PREFIX/bin/widget/directory")
 CONFIG="/$HOME/.shortcuts/,/Mobox box86"
 LOCALDIR="/$PREFIX/bin/widget/local"
 LOCALE_WIDGET="Русский"
@@ -25,13 +25,10 @@ wait
     clear
 fi
 mkdir -p "$PREFIX/bin/widget/"
-echo "" > "$PREFIX/bin/widget/directory"
 echo "$LOCALE_WIDGET" > "$PREFIX/bin/widget/local"
-BASE_DIR=$(<"$PREFIX/bin/widget/directory")
-if [ "$BASE_DIR" = "" ]; then
+if [ -z "$BASE_DIR" ]; then
     BASE_DIR="/storage/emulated/0/Download/weg"
-    mkdir -p "$PREFIX/bin/widget/"  
-echo "$BASE_DIR" > "$PREFIX/bin/widget/directory"
+    echo "$BASE_DIR" > "$PREFIX/bin/widget/directory"
 fi
 show_message() {
     dialog --no-shadow \
@@ -926,7 +923,11 @@ if [ $WINE_START_86 = 0 ]; then
     fi
         clear
 fi
+if [ "$WINE_ST" ]; then
 sed -i "204s/.*/WINE_WERS_86=\"${WINE_ST}\"/" "$wine_86"
+else
+sed -i '204s/.*/WINE_WERS_86="wine-ge-custom-8-25"/' "$wine_86"
+fi
             . "$HOME/.shortcuts/,/Mobox box86"
             ;;
             2) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
@@ -1013,7 +1014,11 @@ sed -i "59s/.*/WINE_64=OFF/" "$wine_64"
 fi
 clear
 fi
+if [ "$WINE_ST" ]; then
 sed -i "188s/.*/WINE_WERS_64=\"${WINE_ST}\"/" "$wine_64"
+else
+sed -i '188s/.*/WINE_WERS_64="wine-9.3-vanilla-wow64"/' "$wine_86"
+fi
             . "$HOME/.shortcuts/,/Mobox WoW64"
             ;;
             2.) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
