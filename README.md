@@ -28,7 +28,7 @@ ____
 [![Скачать Termux-Widget](https://img.shields.io/badge/Скачать-WEG™⚡️Termux--Widget-orange?style=for-the-badge&logo=telegram)](https://t.me/weg_mod_mobox/12/138)  
   
 **Необходимые архивы:**  
-[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/WEG™⚡️GitHub-grey?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases/tag/v.5.3) -  Архив версии **Mobox Menu**  
+[![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1227) [![GitHub](https://img.shields.io/badge/WEG™⚡️GitHub-grey?logo=github)](https://github.com/Sanders-WEG/Mobox-Menu/releases) -  Архив версии **Mobox Menu**  
 [![telegram](https://img.shields.io/badge/WEG™⚡️Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/weg_mod_mobox/12/1128) -  Основной архив для **Mobox Menu** 
 
 **Дополнительные архивы:**  
