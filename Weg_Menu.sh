@@ -256,17 +256,17 @@ sed -i "5s|.*|DIR=$WEG_TXT|" "$DIR_DEFLF"
 fi
     if [ -d "$PREFIX/glibc-wow64" ] || [ -d "$PREFIX/glibc-x86" ] || [ -d "$PREFIX/glibc" ]; then
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.4" --menu "Выберите действие:" 13 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.5" --menu "Выберите действие:" 13 38 3 \
+" Перейти в Главное меню" "" \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
 " Установить Mobox WoW64" "" \
-" Перейти в Главное меню" "" \
 " Выбрать директорию с файлами" "" \
 " Midnight Commander (mc)" "" \
             3>&1 1>&2 2>&3)
     else
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.4" --menu "Выберите действие:" 12 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.5" --menu "Выберите действие:" 12 38 3 \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
 " Установить Mobox WoW64" "" \
@@ -775,8 +775,14 @@ choice=$(dialog --no-shadow \
                     ;;
 " Обновить WEG™⚡️Mobox Menu & Widget") 
      show_progress "Обновление" "⏳ Копирование файлов..." 2
-            cp -r "$BASE_DIR/backup/"* /data/data/com.termux/files/
-     exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
+if [ -d "$HOME/.shortcuts/themes" ]; then
+    rm -rf "$HOME/.shortcuts/themes"
+fi
+if [ -d "$HOME/.shortcuts/backup" ]; then
+    rm -rf "$HOME/.shortcuts/backup"
+fi
+    cp -r "$BASE_DIR/backup/"* /data/data/com.termux/files/
+    exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
 ;;
 " Язык классического меню Mobox") 
 if [ "$LOCALE_WIDGET" == "Русский" ]; then
@@ -1116,7 +1122,8 @@ bash -c "source \"$HOME/Settings\""
 wine_64="$HOME/.shortcuts/,/Mobox WoW64"
 wine_86="$HOME/.shortcuts/,/Mobox box86"
     while true; do
-dialog_text_86="Android:      $ANDROID_VERSION\n
+dialog_text_86="───────────────────────────────────────\n
+Версия ОС:    Android $ANDROID_VERSION\n
 Устройство:   $DEVICE\n
 Процессор:    $CPU\n
 AB Interface: $ABI\n
@@ -1129,7 +1136,8 @@ RAM общий / доступный (Gb): $FULL_RAM / $ACC_RAM\n
    Удобная настройка и запуск Mobox\n
 ───────────────────────────────────────\n
 Выберите опцию для box86:"
-dialog_text_64="Android:      $ANDROID_VERSION\n
+dialog_text_64="───────────────────────────────────────\n
+Версия ОС:    Android $ANDROID_VERSION\n
 Устройство:   $DEVICE\n
 Процессор:    $CPU\n
 AB Interface: $ABI\n
@@ -1163,9 +1171,9 @@ fi
         if [ -d "$PREFIX/glibc-x86" ]; then
     options64+=(7. "Удалить Mobox box86")
         fi
-      menu_height=$((19 + ${#options64[@]}/2))
+      menu_height=$((20 + ${#options64[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.5" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
     else
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1186,9 +1194,9 @@ options86=(
     if [ -d "$PREFIX/glibc-wow64" ]; then
     options86+=(7 "Удалить Mobox WoW64")
     fi
-    menu_height=$((19 + ${#options86[@]}/2))
+    menu_height=$((20 + ${#options86[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.5" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
 fi
 elif [ "$versioo_mob" = "WOW" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
@@ -1207,7 +1215,7 @@ options_64=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_64" 25 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.5" --menu "$dialog_text_64" 26 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
 elif [ "$versioo_mob" = "86" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1225,7 +1233,7 @@ options_86=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.4" --menu "$dialog_text_86" 25 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.5" --menu "$dialog_text_86" 26 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
 fi
         case $? in
             1) break ;;
