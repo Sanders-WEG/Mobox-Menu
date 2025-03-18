@@ -256,7 +256,7 @@ sed -i "5s|.*|DIR=$WEG_TXT|" "$DIR_DEFLF"
 fi
     if [ -d "$PREFIX/glibc-wow64" ] || [ -d "$PREFIX/glibc-x86" ] || [ -d "$PREFIX/glibc" ]; then
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.6" --menu "Выберите действие:" 13 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.7" --menu "Выберите действие:" 13 38 3 \
 " Перейти в Главное меню" "" \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
@@ -266,7 +266,7 @@ fi
             3>&1 1>&2 2>&3)
     else
         choice=$(dialog --no-shadow \
-        --title "WEG™⚡️Mobox Menu v5.6" --menu "Выберите действие:" 12 38 3 \
+        --title "WEG™⚡️Mobox Menu v5.7" --menu "Выберите действие:" 12 38 3 \
 " Установить Mobox box86 и WoW64" "" \
 " Установить Mobox box86" "" \
 " Установить Mobox WoW64" "" \
@@ -402,19 +402,42 @@ SOC_MODEL=$(getprop ro.soc.model)
 PLATFORM=$(getprop ro.board.platform)
 VENDOR=$(getprop ro.hardware.vendor)
 case "$SOC_MODEL" in
-    "SM8150") CHIPSET="Snapdragon 855+; 860" ;;
-    "SM8250") CHIPSET="Snapdragon 865+; 870" ;;
-    "SM8350") CHIPSET="Snapdragon 888" ;;
-    "SM8450") CHIPSET="Snapdragon 8 Gen 1" ;;
-    "SM8550") CHIPSET="Snapdragon 8 Gen 2" ;;
-    "SM8650") CHIPSET="Snapdragon 8 Gen 3" ;;
-    "SM7150") CHIPSET="Snapdragon 730: 730G" ;;
-    "SM7125") CHIPSET="Snapdragon 720G" ;;
-    "SM6375") CHIPSET="Snapdragon 695; 690" ;;
-    "SM6225") CHIPSET="Snapdragon 680" ;;
-    "SM6115") CHIPSET="Snapdragon 662; 460" ;;
-    "SM4250") CHIPSET="Snapdragon 460" ;;
-    *) CHIPSET="$SOC_MODEL" ;;
+"SM4250") CHIPSET="Snapdragon 460" ;;
+"SM4350") CHIPSET="Snapdragon 480; 480+" ;;
+"SM4375") CHIPSET="Snapdragon 4 Gen 1" ;;
+"SM6150") CHIPSET="Snapdragon 675" ;;
+"SM6250") CHIPSET="Snapdragon 665" ;;
+"SM6300") CHIPSET="Snapdragon 662" ;;
+"SM6350") CHIPSET="Snapdragon 690" ;;
+"SM6450") CHIPSET="Snapdragon 6 Gen 1" ;;
+"SM6455") CHIPSET="Snapdragon 7+ Gen 1" ;;
+"SM7150") CHIPSET="Snapdragon 730; 730G" ;;
+"SM7250") CHIPSET="Snapdragon 765; 765G" ;;
+"SM7300") CHIPSET="Snapdragon 7 Gen 1" ;;
+"SM7350") CHIPSET="Snapdragon 778G" ;;
+"SM7355") CHIPSET="Snapdragon 7 Gen 2" ;;
+"SM7450") CHIPSET="Snapdragon 7 Gen 2" ;;
+"SM7550") CHIPSET="Snapdragon 7 Gen 3" ;;
+"SM7650") CHIPSET="Snapdragon 7+ Gen 2" ;;
+"SM8150") CHIPSET="Snapdragon 855+; 860" ;;
+"SM8250") CHIPSET="Snapdragon 865; 865+" ;;
+"SM8350") CHIPSET="Snapdragon 888" ;;
+"SM8450") CHIPSET="Snapdragon 8 Gen 1" ;;
+"SM8550") CHIPSET="Snapdragon 8 Gen 2" ;;
+"SM8650") CHIPSET="Snapdragon 8 Gen 3" ;;
+"SM8750") CHIPSET="Snapdragon 8 Elite Gen 4" ;;
+"SM8875") CHIPSET="Snapdragon 8+ Gen 2" ;;
+"SM6375") CHIPSET="Snapdragon 695" ;;
+"SM6325") CHIPSET="Snapdragon 600 series" ;;
+"SM8125") CHIPSET="Snapdragon 860" ;;
+"SM8130") CHIPSET="Snapdragon 870" ;;
+"SM8155") CHIPSET="Snapdragon 855; 855+" ;;
+"SM8135") CHIPSET="Snapdragon 865" ;;
+"SM8385") CHIPSET="Snapdragon 888+" ;;
+"SM8255") CHIPSET="Snapdragon 765G" ;;
+"SM8455") CHIPSET="Snapdragon 8 Gen 2" ;;
+"SM8655") CHIPSET="Snapdragon 8 Gen 3" ;;
+"SM8635") CHIPSET="Snapdragon 8s Gen 3" ;;
 esac
 if [[ "$VENDOR" == "mediatek" || "$PLATFORM" =~ ^(mt6|mt8|mt67|mt68|mt69)$ ]]; then
     CHIPSET="MediaTek $PLATFORM"
@@ -758,14 +781,28 @@ $WINE_ST" 12 30 5 \
     esac
 }
 other_menu() {
+if [ ! -d "$PREFIX/share/xfce4" ]; then
 choice=$(dialog --no-shadow \
---title "🛠 Дополнительно" --menu "Выберите опцию:" 13 42 3 \
+--title "🛠 Дополнительно" --menu "Выберите опцию:" 14 42 3 \
+" Установить оболочку Xfce4 🧿" "" \
 " Восстановить библиотеки" "" \
 " Обновить WEG™⚡️Mobox Menu & Widget" "" \
 " Язык классического меню Mobox" "" \
 " Сменить расположение файлов" "" \
 " Midnight Commander (mc)" "" \
 " Информация" "" 2>&1 >/dev/tty)
+elif [ -d "$PREFIX/share/xfce4" ]; then
+    choice=$(dialog --no-shadow \
+--title "🛠 Дополнительно" --menu "Выберите опцию:" 15 42 3 \
+" Запустить оболочку Xfce4 🔷" "" \
+" Восстановить библиотеки" "" \
+" Обновить WEG™⚡️Mobox Menu & Widget" "" \
+" Язык классического меню Mobox" "" \
+" Сменить расположение файлов" "" \
+" Midnight Commander (mc)" "" \
+" Удалить оболочку Xfce4 💢" "" \
+" Информация" "" 2>&1 >/dev/tty)
+fi
                 case $choice in
 " Восстановить библиотеки") dialog --no-shadow \
 --yesno "Восстановление всех библиотек\n         Продолжить?" 6 33
@@ -821,6 +858,20 @@ exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
         ;;
 esac
 other_menu
+;;
+" Установить оболочку Xfce4 🧿")
+    show_progress "Установка" "⏳ Установливается оболочка Xfce4..." 2
+    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
+    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
+    chmod +x $PREFIX/bin/startx
+    ;;
+" Запустить оболочку Xfce4 🔷")
+    startx
+;;
+" Удалить оболочку Xfce4 💢")
+    show_progress "Удаление" "⏳ Удаляется оболочка Xfce4..." 2
+    pkg uninstall -y xfce4 xfce4-terminal xfce4-session xfce4-panel xfce4-settings
+    rm -rf ~/.config/xfce4 ~/.cache/xfce4
 ;;
 " Сменить расположение файлов")
     BASE_DIR="/storage/emulated/0"
@@ -1173,7 +1224,7 @@ fi
         fi
       menu_height=$((20 + ${#options64[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.6" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.7" --menu "$dialog_text_64" "$menu_height" 43 "${#options64[@]}" "${options64[@]}" 2>&1 >/dev/tty)
     else
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1196,7 +1247,7 @@ options86=(
     fi
     menu_height=$((20 + ${#options86[@]}/2))
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.6" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.7" --menu "$dialog_text_86" "$menu_height" 43 "${#options86[@]}" "${options86[@]}" 2>&1 >/dev/tty)
 fi
 elif [ "$versioo_mob" = "WOW" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
@@ -1215,7 +1266,7 @@ options_64=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.6" --menu "$dialog_text_64" 26 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.7" --menu "$dialog_text_64" 26 43 "${#options_64[@]}" "${options_64[@]}" 2>&1 >/dev/tty)
 elif [ "$versioo_mob" = "86" ]; then
 if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
     NAME_MENU_86="Запуск Mobox box86"
@@ -1233,7 +1284,7 @@ options_86=(
     6. "Дополнительные параметры"
 )
 choice=$(dialog --no-shadow \
---title "WEG™⚡️Mobox Menu v5.6" --menu "$dialog_text_86" 26 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
+--title "WEG™⚡️Mobox Menu v5.7" --menu "$dialog_text_86" 26 43 "${#options_86[@]}" "${options_86[@]}" 2>&1 >/dev/tty)
 fi
         case $? in
             1) break ;;
