@@ -123,6 +123,10 @@ elif [ "$versioo_mob" = "WOW" ]; then
 fi
 cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc/
 fi
+show_progress "Установка" "⏳ Распаковка оболочки Xfce4..." 2
+    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
+    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
+    chmod +x $PREFIX/bin/startx
 show_progress "Установка" "⏳ Удаление временных файлов..." 2
 rm -rf "$temp_dir"
 link_target="$PREFIX/glibc/opt/scripts/mobox"
