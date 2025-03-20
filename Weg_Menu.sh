@@ -405,39 +405,48 @@ case "$SOC_MODEL" in
 "SM4250") CHIPSET="Snapdragon 460" ;;
 "SM4350") CHIPSET="Snapdragon 480; 480+" ;;
 "SM4375") CHIPSET="Snapdragon 4 Gen 1" ;;
+"SM4450") CHIPSET="Snapdragon 4 Gen 2" ;;
+"SM4635") CHIPSET="Snapdragon 4s Gen 2" ;;
+"SM6115") CHIPSET="Snapdragon 662; 460" ;;
 "SM6150") CHIPSET="Snapdragon 675" ;;
+"SM6225") CHIPSET="Snapdragon 680" ;;
 "SM6250") CHIPSET="Snapdragon 665" ;;
 "SM6300") CHIPSET="Snapdragon 662" ;;
+"SM6325") CHIPSET="Snapdragon 600 series" ;;
 "SM6350") CHIPSET="Snapdragon 690" ;;
+"SM6375") CHIPSET="Snapdragon 695" ;;
 "SM6450") CHIPSET="Snapdragon 6 Gen 1" ;;
-"SM6455") CHIPSET="Snapdragon 7+ Gen 1" ;;
+"SM6475-AB") CHIPSET="Snapdragon 6 Gen 3" ;;
+"SM6650") CHIPSET="Snapdragon 6 Gen 4" ;;
 "SM7150") CHIPSET="Snapdragon 730; 730G" ;;
-"SM7250") CHIPSET="Snapdragon 765; 765G" ;;
-"SM7300") CHIPSET="Snapdragon 7 Gen 1" ;;
+"SM7125") CHIPSET="Snapdragon 720G" ;;
+"SM7250") CHIPSET="Snapdragon 765" ;;
 "SM7350") CHIPSET="Snapdragon 778G" ;;
 "SM7355") CHIPSET="Snapdragon 7 Gen 2" ;;
 "SM7450") CHIPSET="Snapdragon 7 Gen 2" ;;
 "SM7550") CHIPSET="Snapdragon 7 Gen 3" ;;
-"SM7650") CHIPSET="Snapdragon 7+ Gen 2" ;;
-"SM8150") CHIPSET="Snapdragon 855+; 860" ;;
-"SM8250") CHIPSET="Snapdragon 865; 865+" ;;
+"SM7635") CHIPSET="Snapdragon 7+ Gen 2" ;;
+"SM8125") CHIPSET="Snapdragon 855+" ;;
+"SM8130") CHIPSET="Snapdragon 870" ;;
+"SM8135") CHIPSET="Snapdragon 865" ;;
+"SM8150") CHIPSET="Snapdragon 860" ;;
+"SM8155") CHIPSET="Snapdragon 855; 855+" ;;
+"SM8250") CHIPSET="Snapdragon 865+; 870" ;;
+"SM8255") CHIPSET="Snapdragon 765G" ;;
 "SM8350") CHIPSET="Snapdragon 888" ;;
+"SM8385") CHIPSET="Snapdragon 888+" ;;
 "SM8450") CHIPSET="Snapdragon 8 Gen 1" ;;
+"SM8455") CHIPSET="Snapdragon 8 Gen 2" ;;
 "SM8550") CHIPSET="Snapdragon 8 Gen 2" ;;
 "SM8650") CHIPSET="Snapdragon 8 Gen 3" ;;
-"SM8750") CHIPSET="Snapdragon 8 Elite Gen 4" ;;
-"SM8875") CHIPSET="Snapdragon 8+ Gen 2" ;;
-"SM6375") CHIPSET="Snapdragon 695" ;;
-"SM6325") CHIPSET="Snapdragon 600 series" ;;
-"SM8125") CHIPSET="Snapdragon 860" ;;
-"SM8130") CHIPSET="Snapdragon 870" ;;
-"SM8155") CHIPSET="Snapdragon 855; 855+" ;;
-"SM8135") CHIPSET="Snapdragon 865" ;;
-"SM8385") CHIPSET="Snapdragon 888+" ;;
-"SM8255") CHIPSET="Snapdragon 765G" ;;
-"SM8455") CHIPSET="Snapdragon 8 Gen 2" ;;
-"SM8655") CHIPSET="Snapdragon 8 Gen 3" ;;
 "SM8635") CHIPSET="Snapdragon 8s Gen 3" ;;
+"SM8735") CHIPSET="Snapdragon 8s Elite" ;;
+"SM8750-AB") CHIPSET="Snapdragon 8 Elite Gen 4" ;;
+"SM8775") CHIPSET="Snapdragon 8+ Gen 4" ;;
+"SM8875") CHIPSET="Snapdragon 8+ Gen 2" ;;
+"SMX") CHIPSET="Snapdragon X" ;;
+"SMX Plus") CHIPSET="Snapdragon X Plus" ;;
+"SMX Elite") CHIPSET="Snapdragon X Elite" ;;
 esac
 if [[ "$VENDOR" == "mediatek" || "$PLATFORM" =~ ^(mt6|mt8|mt67|mt68|mt69)$ ]]; then
     CHIPSET="MediaTek $PLATFORM"
@@ -781,29 +790,29 @@ $WINE_ST" 12 30 5 \
     esac
 }
 other_menu() {
-if [ ! -d "$PREFIX/share/xfce4" ]; then
 choice=$(dialog --no-shadow \
---title "🛠 Дополнительно" --menu "Выберите опцию:" 14 42 3 \
-" Установить оболочку Xfce4 🧿" "" \
-" Восстановить библиотеки" "" \
-" Обновить WEG™⚡️Mobox Menu & Widget" "" \
-" Язык классического меню Mobox" "" \
-" Сменить расположение файлов" "" \
-" Midnight Commander (mc)" "" \
-" Информация" "" 2>&1 >/dev/tty)
-elif [ -d "$PREFIX/share/xfce4" ]; then
-    choice=$(dialog --no-shadow \
 --title "🛠 Дополнительно" --menu "Выберите опцию:" 15 42 3 \
-" Запустить оболочку Xfce4 🔷" "" \
+" Классическое меню Mobox" "" \
 " Восстановить библиотеки" "" \
 " Обновить WEG™⚡️Mobox Menu & Widget" "" \
+" Обновить оболочку Xfce4" "" \
 " Язык классического меню Mobox" "" \
 " Сменить расположение файлов" "" \
 " Midnight Commander (mc)" "" \
-" Удалить оболочку Xfce4 💢" "" \
 " Информация" "" 2>&1 >/dev/tty)
-fi
                 case $choice in
+" Классическое меню Mobox")
+    termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
+    mobox
+;;
+" Обновить оболочку Xfce4")
+pkg uninstall -y xfce4 xfce4-terminal xfce4-session xfce4-panel xfce4-settings
+rm -rf ~/.config/xfce4 ~/.cache/xfce4
+show_progress "Установка" "⏳ Установливается оболочка Xfce4..." 2
+    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
+    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
+    chmod +x $PREFIX/bin/startx
+;;
 " Восстановить библиотеки") dialog --no-shadow \
 --yesno "Восстановление всех библиотек\n         Продолжить?" 6 33
                     if [ $? -eq 0 ]; then
@@ -858,20 +867,6 @@ exec bash -c ". \"/data/data/com.termux/files/home/.shortcuts/,/Mod Menu\""
         ;;
 esac
 other_menu
-;;
-" Установить оболочку Xfce4 🧿")
-    show_progress "Установка" "⏳ Установливается оболочка Xfce4..." 2
-    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
-    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
-    chmod +x $PREFIX/bin/startx
-    ;;
-" Запустить оболочку Xfce4 🔷")
-    startx
-;;
-" Удалить оболочку Xfce4 💢")
-    show_progress "Удаление" "⏳ Удаляется оболочка Xfce4..." 2
-    pkg uninstall -y xfce4 xfce4-terminal xfce4-session xfce4-panel xfce4-settings
-    rm -rf ~/.config/xfce4 ~/.cache/xfce4
 ;;
 " Сменить расположение файлов")
     BASE_DIR="/storage/emulated/0"
@@ -987,8 +982,7 @@ sed -i '204s/.*/WINE_WERS_86="wine-ge-custom-8-25"/' "$wine_86"
 fi
             . "$HOME/.shortcuts/,/Mobox box86"
             ;;
-            2) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
-            mobox
+            2) startx
             ;;
             3) 
             clear
@@ -1078,8 +1072,8 @@ sed -i '188s/.*/WINE_WERS_64="wine-9.3-vanilla-wow64"/' "$wine_86"
 fi
             . "$HOME/.shortcuts/,/Mobox WoW64"
             ;;
-            2.) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
-            mobox ;;
+            2.) startx
+            ;;
             3.) clear
             settings_game "$HOME/.shortcuts/,/Mobox WoW64" "weg";;
             4.)
@@ -1213,7 +1207,7 @@ fi
         options64=(
     "🎮" "Список Игр с настройками  🎮"
     1. "$NAME_MENU_64"
-    2. "Классическое меню Mobox"
+    2. "Запуск Mobox WoW64+Xfce4"
     3. "Настройки Mobox WoW64"
     4. "Настройки WINE для WoW64"
     5. "Перейти на Mobox box86"
@@ -1236,7 +1230,7 @@ fi
 options86=(
     "🎮" "Список Игр с настройками  🎮"
     1 "$NAME_MENU_86"
-    2 "Классическое меню Mobox"
+    2 "Запуск Mobox box86+Xfce4"
     3 "Настройки Mobox box86"
     4 "Настройки WINE для box86"
     5 "Перейти на Mobox WoW64"
@@ -1260,7 +1254,7 @@ if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
 options_64=(
     "🎮" "Список Игр с настройками  🎮"
     1. "$NAME_MENU_64"
-    2. "Классическое меню Mobox"
+    2. "Запуск Mobox WoW64+Xfce4"
     3. "Настройки Mobox WoW64"
     4. "Настройки WINE для WoW64"
     6. "Дополнительные параметры"
@@ -1278,7 +1272,7 @@ if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
 options_86=(
     "🎮" "Список Игр с настройками  🎮"
     1 "$NAME_MENU_86"
-    2 "Классическое меню Mobox"
+    2 "Запуск Mobox box86+Xfce4"
     3 "Настройки Mobox box86"
     4 "Настройки WINE для box86"
     6. "Дополнительные параметры"
