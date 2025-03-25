@@ -123,10 +123,6 @@ elif [ "$versioo_mob" = "WOW" ]; then
 fi
 cp -r "$BASE_DIR/system/glibc_64_ru/"* /data/data/com.termux/files/usr/glibc/
 fi
-show_progress "Установка" "⏳ Распаковка оболочки Xfce4..." 2
-    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
-    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
-    chmod +x $PREFIX/bin/startx
 show_progress "Установка" "⏳ Удаление временных файлов..." 2
 rm -rf "$temp_dir"
 link_target="$PREFIX/glibc/opt/scripts/mobox"
@@ -795,28 +791,14 @@ $WINE_ST" 12 30 5 \
 }
 other_menu() {
 choice=$(dialog --no-shadow \
---title "🛠 Дополнительно" --menu "Выберите опцию:" 15 42 3 \
-" Классическое меню Mobox" "" \
+--title "🛠 Дополнительно" --menu "Выберите опцию:" 13 42 3 \
 " Восстановить библиотеки" "" \
 " Обновить WEG™⚡️Mobox Menu & Widget" "" \
-" Обновить оболочку Xfce4" "" \
 " Язык классического меню Mobox" "" \
 " Сменить расположение файлов" "" \
 " Midnight Commander (mc)" "" \
 " Информация" "" 2>&1 >/dev/tty)
                 case $choice in
-" Классическое меню Mobox")
-    termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
-    mobox
-;;
-" Обновить оболочку Xfce4")
-pkg uninstall -y xfce4 xfce4-terminal xfce4-session xfce4-panel xfce4-settings
-rm -rf ~/.config/xfce4 ~/.cache/xfce4
-show_progress "Установка" "⏳ Установливается оболочка Xfce4..." 2
-    tar -xvf "$BASE_DIR/Mobox86_64/usr.tar.xz" -C $PREFIX > /dev/null
-    echo "xdesk > /dev/null 2>&1" > $PREFIX/bin/startx
-    chmod +x $PREFIX/bin/startx
-;;
 " Восстановить библиотеки") dialog --no-shadow \
 --yesno "Восстановление всех библиотек\n         Продолжить?" 6 33
                     if [ $? -eq 0 ]; then
@@ -986,7 +968,8 @@ sed -i '204s/.*/WINE_WERS_86="wine-ge-custom-8-25"/' "$wine_86"
 fi
             . "$HOME/.shortcuts/,/Mobox box86"
             ;;
-            2) startx
+            2) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
+            mobox
             ;;
             3) 
             clear
@@ -1076,8 +1059,8 @@ sed -i '188s/.*/WINE_WERS_64="wine-9.3-vanilla-wow64"/' "$wine_86"
 fi
             . "$HOME/.shortcuts/,/Mobox WoW64"
             ;;
-            2.) startx
-            ;;
+            2.) termux-fix-shebang "$PREFIX/glibc/opt/scripts/mobox"
+            mobox ;;
             3.) clear
             settings_game "$HOME/.shortcuts/,/Mobox WoW64" "weg";;
             4.)
@@ -1211,7 +1194,7 @@ fi
         options64=(
     "🎮" "Список Игр с настройками  🎮"
     1. "$NAME_MENU_64"
-    2. "Запуск Mobox WoW64+Xfce4"
+    2. "Классическое меню Mobox"
     3. "Настройки Mobox WoW64"
     4. "Настройки WINE для WoW64"
     5. "Перейти на Mobox box86"
@@ -1234,7 +1217,7 @@ fi
 options86=(
     "🎮" "Список Игр с настройками  🎮"
     1 "$NAME_MENU_86"
-    2 "Запуск Mobox box86+Xfce4"
+    2 "Классическое меню Mobox"
     3 "Настройки Mobox box86"
     4 "Настройки WINE для box86"
     5 "Перейти на Mobox WoW64"
@@ -1258,7 +1241,7 @@ if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
 options_64=(
     "🎮" "Список Игр с настройками  🎮"
     1. "$NAME_MENU_64"
-    2. "Запуск Mobox WoW64+Xfce4"
+    2. "Классическое меню Mobox"
     3. "Настройки Mobox WoW64"
     4. "Настройки WINE для WoW64"
     6. "Дополнительные параметры"
@@ -1276,7 +1259,7 @@ if [ -e $PREFIX/glibc/$WINE_ST/.wine/.update-timestamp ]; then
 options_86=(
     "🎮" "Список Игр с настройками  🎮"
     1 "$NAME_MENU_86"
-    2 "Запуск Mobox box86+Xfce4"
+    2 "Классическое меню Mobox"
     3 "Настройки Mobox box86"
     4 "Настройки WINE для box86"
     6. "Дополнительные параметры"
